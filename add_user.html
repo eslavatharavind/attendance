@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add User</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Add User</h1>
+            <form method="POST" action="/add_user">
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input class="input" type="text" name="name" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Office</label>
+                    <div class="control">
+                        <input class="input" type="text" name="office" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Designation</label>
+                    <div class="control">
+                        <input class="input" type="text" name="designation" required>
+                    </div>
+                </div>
+                <div class="control">
+                    <button class="button is-primary" type="submit">Add User</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
