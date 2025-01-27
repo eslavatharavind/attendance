@@ -3,7 +3,7 @@
 <head>
     <title>Attendance</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/instascan/1.0.0/instascan.min.js"></script>
+    <script src="https://github.com/schmich/instascan/releases/download/1.0.0/instascan.min.js"></script>
 </head>
 <body>
     <section class="section">
@@ -13,19 +13,20 @@
                 <div class="column is-half">
                     <video id="preview" class="video" style="width: 100%; border: 1px solid #ccc;"></video>
                 </div>
-                <div class="column is-half">
-                    <form method="POST" action="/attendance">
-                        <div class="field">
-                            <label class="label">Scanned QR Code Data</label>
-                            <div class="control">
-                                <input id="qr_data" class="input" type="text" name="qr_data" placeholder="QR code data" required readonly>
-                            </div>
-                        </div>
+                
+            </div>
+            <div class="column is-half">
+                <form method="POST" action="/attendance">
+                    <div class="field">
+                        <label class="label">Scanned QR Code Data</label>
                         <div class="control">
-                            <button class="button is-primary" type="submit">Submit</button>
+                            <input id="qr_data" class="input" type="text" name="qr_data" placeholder="QR code data" required readonly>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="control">
+                        <button class="button is-primary" type="submit">Submit</button>
+                    </div>
+                </form>
             </div>
             <hr>
             <h2 class="subtitle">Attendance Records</h2>

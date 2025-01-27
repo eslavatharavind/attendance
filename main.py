@@ -68,7 +68,8 @@ def add_user():
 @app.route('/attendance', methods=['GET', 'POST'])
 def attendance():
     if request.method == 'POST':
-        qr_data = request.form.get('qr_data')
+        qr_data = request.form.get('qr-reader-results')
+        print(qr_data)
         if qr_data and qr_data.startswith('user_id:'):
             try:
                 user_id = int(qr_data.split(':')[1])
